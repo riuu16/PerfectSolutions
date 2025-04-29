@@ -12,14 +12,8 @@ const App = () => {
       <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
-      <Route
-        path="/dashboard"
-        element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
-      />
-      <Route
-        path="/ask-us"
-        element={isAuthenticated() ? <AskUs /> : <Navigate to="/login" />}
-      />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/ask-us" element={<AskUs />} />
     </Routes>
   );
 };
